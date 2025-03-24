@@ -12,6 +12,8 @@ public class LibraryManagement {
 
         //Creating a User
 
+        System.out.println("Welcome to Library Management System");
+
         User person = new User("varun", "abc@gmail.com", "123 Main St", "555-1234");
 
         User person2 = new User("venkatesh", "jkk@gmail.com", "780 Kakinada", "9000324533");
