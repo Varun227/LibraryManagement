@@ -1,6 +1,7 @@
 package org.airtribe.account;
 
 import org.airtribe.book.Book;
+import org.airtribe.bookLending.BookLending;
 import org.airtribe.inventory.Inventory;
 import org.airtribe.user.User;
 
@@ -9,6 +10,8 @@ import java.util.HashMap;
 public class Librarian extends Account {
 
     private HashMap<String, User> userDatabase = new HashMap<>();
+    private HashMap<String, BookLending> lendingDatabase = new HashMap<>();
+
 
 
     public Librarian(String id, String password, User person) {
@@ -43,6 +46,22 @@ public class Librarian extends Account {
     }
 
     ;
+
+    public void checkoutBook(String bookId,String memberId){
+        BookLending bookLending = new BookLending(bookId,memberId);
+        lendingDatabase.put(bookId,bookLending);
+        System.out.println("Book Checked Out");
+    }
+
+
+    public void returnBook(String bookId){
+        if(lendingDatabase.containsKey(bookId)){
+            lendingDatabase.remove(bookId);
+            System.out.println("Book Returned");
+        }else{
+            System.out.println("Book Not Found");
+        }
+    }
 
     public void displayUserDetails() {
         person.displayUserDetails();

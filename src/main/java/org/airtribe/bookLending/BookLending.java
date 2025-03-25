@@ -9,7 +9,7 @@ public class BookLending {
     private static String bookId;
     private static String memberId;
 
-    BookLending(String bookId, String memberId){
+    public BookLending(String bookId, String memberId){
         this.bookId = bookId;
         this.memberId = memberId;
         creationDate = LocalDateTime.now();
