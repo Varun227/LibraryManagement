@@ -40,6 +40,8 @@ use Case diagram
 
 ##Class diagram
 
+![image](https://github.com/user-attachments/assets/a5be743a-a81f-4aee-866a-b1e666a47ff6)
+
 <img width="965" alt="ClassDiagram" src="https://github.com/user-attachments/assets/28f779ee-32b5-4adc-b942-52cc19d651b5" />
 
 
